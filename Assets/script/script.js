@@ -12,14 +12,17 @@ function writePassword() {
   if (length > 128){
     alert("Cannot allow more than 128 characters. Please restart.");
   }
-  if (length.typeof != "number"){
-    alert("Only numbers are accepted. Please restart.")
-  }
+  // if (length.type !== 'number'){
+  //   alert("Only numbers are accepted. Please restart.");
+  // } breaks it for some reason
   else {
-    let Lcase = confirm("Do you want lowercase letters included?");
-    let Ucase = confirm("Do you want upperccase letters included?");
-    let numeral = confirm("Do you want numbers included?");
-    let special = confirm("Do you want special characters?");
+    let PW = {
+      Lcase:confirm("Do you want lowercase letters included?"),
+      Ucase:confirm("Do you want upperccase letters included?"),
+      numeral:confirm("Do you want numbers included?"),
+      special:confirm("Do you want special characters?")
+    }
+    console.log(PW)
   }
   
   
