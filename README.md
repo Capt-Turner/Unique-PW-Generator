@@ -8,4 +8,4 @@ You must select at least one type of character or it will fail.
 
 If all steps are completed properly, the newly generated password will appear in the text box for convienient copy and pasteing
 
-<img src="Example.png" height=500px width=500px>
+<img src="/Assets/screenshots/Example.png" height=500px width=500px>
