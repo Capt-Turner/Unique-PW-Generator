@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 PW ={length:0,
   Lcase:false,
@@ -23,7 +22,6 @@ function writePassword() {
     PW.numeral = confirm("Do you want numbers in your password?");
     PW.special = confirm("Do you want special characters in your password?");
     generatePassword()
-    console.log(length.typeof);
   }
   else {
     alert("You must select between 8 and 128 characters. Please restart.")
@@ -45,17 +43,12 @@ function generatePassword() {
   for (let i = 0; i < `${PW.length}`; i++) {
     const pass = choice[Math.floor(Math.random() * choice.length)];
     passwordText.textContent += pass;
-  }
 
-  console.log(PW);
-  console.log(choice);
-
-   }};
+   }}};
 
 
 
 
 
 generateBtn.addEventListener("click", writePassword);
-
 
