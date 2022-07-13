@@ -9,21 +9,24 @@ PW ={length:0,
 
 function writePassword() {
   var passwordText = document.querySelector("#password");
-  let length = prompt("How long would you like your password?" , 8);
+  let length = prompt("How long would you like your password?" , 0);
   if (length < 8){
     alert("You must choose 8 or more characters. Please restart.");
   }
   if (length > 128){
     alert("Cannot allow more than 128 characters. Please restart.");
   }
-
-  else {
+  if (length <= 128 && length >= 8){
     PW.length = length;
     PW.Lcase = confirm("Do you want lowercase letters in your password?");
     PW.Ucase = confirm("Do you want uppercase letters in your password?");
     PW.numeral = confirm("Do you want numbers in your password?");
     PW.special = confirm("Do you want special characters in your password?");
     generatePassword()
+    console.log(length.typeof);
+  }
+  else {
+    alert("You must select between 8 and 128 characters. Please restart.")
   }
 function generatePassword() {
   const choice = [];
